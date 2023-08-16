@@ -1,0 +1,69 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+-- Defining Ui Library
+local Window = Rayfield:CreateWindow({
+    Name = "GAME NAME -PRIME TIME", -- Game Name
+    LoadingTitle = "PRIME TIME",
+    LoadingSubtitle = "Created By: Prime Time",
+    ConfigurationSaving = {
+       Enabled = false,
+       FolderName = nil,
+       FileName = "PrimeTime"
+    },
+    Discord = {
+       Enabled = true,
+       Invite = "https://discord.gg/CSEr4x8Zvy",
+       RememberJoins = true
+    },
+    KeySystem = false,
+    KeySettings = {
+       Title = "Untitled",
+       Subtitle = "Key System",
+       Note = "No method of obtaining the key is provided",
+       FileName = "Key", 
+       SaveKey = true,
+       GrabKeyFromSite = false,
+       Key = {"Hello"} 
+    }
+ })
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+--Notification
+ Rayfield:Notify({
+    Title = "PRIME TIME",
+    Content = "Want more UGC Limited Scripts? Join my discord i share them free there. https://discord.gg/CSEr4x8Zvy",
+    Duration = 5,
+    Image = nil,
+    Actions = { 
+       Ignore = {
+          Name = "Close",
+          Callback = function()
+          print("The user tapped Okay!")
+       end
+    },
+ },
+ })
+----------------------------------------------------------------------------------------------------------------
+-- Script Start!                           -Script By PRIME TIME                                              --
+----------------------------------------------------------------------------------------------------------------
+ local isRunning = false
+ --------------------------------------------------
+ --                 Toggles                      --
+ --------------------------------------------------
+
+
+-----------------------------------------------------------------
+--                         Buttons                             --
+-----------------------------------------------------------------
+ local TpTab = Window:CreateTab("Teleports🛬", nil)
+ local TpSection = TpTab:CreateSection("Teleports")
+
+ local Button = TpTab:CreateButton({
+    Name = "Hill",
+    Callback = function()
+        local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        local targetCFrame = CFrame.new(21.5, 319.379333, 2.5, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        character:SetPrimaryPartCFrame(targetCFrame)
+    end,
+})
